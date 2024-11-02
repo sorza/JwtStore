@@ -1,14 +1,10 @@
 ﻿using JwtStore.Core.Context.SharedContext.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JwtStore.Core.Context.AccountContext.ValueObjects
 {
     public class Verification : ValueObject
     {
+        protected Verification() { }
         public string Code { get; } = Guid.NewGuid().ToString("N")[..6].ToUpper();
         public DateTime? ExpiresAt { get; private set; } = DateTime.UtcNow.AddMinutes(5);
         public DateTime? VerifiedAt { get; private set; } = null;

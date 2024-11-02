@@ -6,6 +6,20 @@ namespace JwtStore.Core.Context.AccountContext.ValueObjects
 {
     public class Password : ValueObject
     {
+        protected Password()
+        {
+            
+        }
+
+        public Password(string? text = null)
+        {
+            if (string.IsNullOrEmpty(text) || string.IsNullOrWhiteSpace(text))
+                text = Generate();
+
+            Hash = Hashing(text);
+
+        }
+
         private const string Valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         private const string Special = "!@#$%ˆ&*(){}[];";
 
