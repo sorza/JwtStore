@@ -4,7 +4,8 @@ namespace JwtStore.Core.Context.AccountContext.ValueObjects
 {
     public class Verification : ValueObject
     {
-        protected Verification() { }
+        public Verification() { }
+
         public string Code { get; } = Guid.NewGuid().ToString("N")[..6].ToUpper();
         public DateTime? ExpiresAt { get; private set; } = DateTime.UtcNow.AddMinutes(5);
         public DateTime? VerifiedAt { get; private set; } = null;
