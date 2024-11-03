@@ -14,13 +14,13 @@ namespace JwtStore.Infra.Contexts.AccountContext.Mappings
 
             builder.Property(x => x.Name)
                 .HasColumnName("Name")
-                .HasColumnName("NVARCHAR")
+                .HasColumnType("NVARCHAR")
                 .HasMaxLength(120)
                 .IsRequired(true);
 
             builder.Property(x => x.Image)
-                .HasColumnName("Name")
-                .HasColumnName("NVARCHAR")
+                .HasColumnName("Image")
+                .HasColumnType("NVARCHAR")
                 .HasMaxLength(255)
                 .IsRequired(true);
 
