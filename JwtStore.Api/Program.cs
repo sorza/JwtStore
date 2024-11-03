@@ -6,7 +6,7 @@ builder.AddConfiguration();
 builder.AddDatabase();
 builder.AddJwtAuthentication();
 builder.AddAccountContext();
-builder.AddMediatR();
+builder.AddMediator();
 
 var app = builder.Build();
 app.UseHttpsRedirection();

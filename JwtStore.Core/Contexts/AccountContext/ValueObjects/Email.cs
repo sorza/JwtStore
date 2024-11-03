@@ -6,9 +6,11 @@ namespace JwtStore.Core.Contexts.AccountContext.ValueObjects;
 
 public partial class Email : ValueObject
 {
-    private const string Pattern = @"^\w+([-+.']\w+)@\w+([-.]\w+)\.\w+([-.]\w+)*$";
+    private const string Pattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
 
-    protected Email(){}
+    protected Email()
+    {
+    }
 
     public Email(string address)
     {

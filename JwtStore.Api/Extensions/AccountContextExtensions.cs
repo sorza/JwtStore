@@ -1,5 +1,4 @@
-﻿using JwtStore.Core.Contexts.AccountContext.UseCases.Create;
-using MediatR;
+﻿using MediatR;
 
 namespace JwtStore.Api.Extensions
 {
@@ -33,7 +32,7 @@ namespace JwtStore.Api.Extensions
                 var result = await handler.Handle(request, new CancellationToken());
 
                 return result.IsSuccess
-                    ? Results.Created("",result)
+                    ? Results.Created($"api/v1/users/{result.Data?.Id}", result)
                     : Results.Json(result, statusCode: result.Status);
             });
 

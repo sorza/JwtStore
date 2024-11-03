@@ -25,7 +25,7 @@ namespace JwtStore.Core.Contexts.AccountContext.UseCases.Create
                 if (!res.IsValid)
                     return new Response("Requisição inválida", 400, res.Notifications);
             }
-            catch 
+            catch
             {
                 return new Response("Não foi possível validar sua requisição", 500);
             }
@@ -44,7 +44,7 @@ namespace JwtStore.Core.Contexts.AccountContext.UseCases.Create
                 password = new Password(request.Password);
                 user = new User(request.Name, email, password);
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 return new Response(ex.Message, 400);
             }
