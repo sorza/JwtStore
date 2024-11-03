@@ -4,6 +4,19 @@
     {
         public static SecretsConfiguration Secrets { get; set; } = new();
         public static DatabaseConfiguration Database { get; set; } = new();
+        public static EmailConfiguration Email { get; set; } = new();
+        public static SendGridConfiguration SendGrid { get; set; } = new();
+
+        public class EmailConfiguration
+        {
+            public string DefaultFromEmail { get; set; } = "teste@teste.com";
+            public string DefaultFromName { get; set; } = "teste.com";
+        }
+
+        public class SendGridConfiguration
+        {
+            public string ApiKey { get; set; } = string.Empty;
+        }
 
         public class DatabaseConfiguration
         {
