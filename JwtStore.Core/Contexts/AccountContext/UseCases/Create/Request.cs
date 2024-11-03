@@ -1,4 +1,4 @@
-﻿namespace JwtStore.Core.Context.AccountContext.UseCases.Create
+﻿namespace JwtStore.Core.Contexts.AccountContext.UseCases.Create
 {
     public record Request(
         string Name,

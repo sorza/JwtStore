@@ -1,5 +1,5 @@
-﻿using JwtStore.Core.Context.AccountContext.Entities;
-using JwtStore.Core.Context.AccountContext.UseCases.Create.Contracts;
+﻿using JwtStore.Core.Contexts.AccountContext.Entities;
+using JwtStore.Core.Contexts.AccountContext.UseCases.Create.Contracts;
 using JwtStore.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 

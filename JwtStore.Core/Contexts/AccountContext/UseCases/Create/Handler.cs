@@ -1,8 +1,8 @@
-﻿using JwtStore.Core.Context.AccountContext.Entities;
-using JwtStore.Core.Context.AccountContext.UseCases.Create.Contracts;
-using JwtStore.Core.Context.AccountContext.ValueObjects;
+﻿using JwtStore.Core.Contexts.AccountContext.Entities;
+using JwtStore.Core.Contexts.AccountContext.UseCases.Create.Contracts;
+using JwtStore.Core.Contexts.AccountContext.ValueObjects;
 
-namespace JwtStore.Core.Context.AccountContext.UseCases.Create
+namespace JwtStore.Core.Contexts.AccountContext.UseCases.Create
 {
     public class Handler
     {
