@@ -15,6 +15,14 @@ namespace JwtStore.Core.Context.AccountContext.Entities
             Email = email;
             Password = new Password(password);
         }
+
+        public User(string name, Email email, Password password)
+        {
+            Name = name;
+            Email = email;
+            Password = password;
+        }
+
         public string Name { get; private set; } = string.Empty;
         public Email Email { get; private set; } = null!;
         public Password Password { get; private set; } = null!;
