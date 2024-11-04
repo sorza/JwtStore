@@ -10,7 +10,9 @@ namespace JwtStore.Infra.Contexts.AccountContext.Mappings
         {
             builder.ToTable("Role");
 
-            builder.Property(x=>x.Name)
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x=>x.Name)                
                 .HasColumnName("Name")
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(120)
